@@ -29,7 +29,8 @@ def get_vector(text):
     return embeddings.numpy().tolist()
 
 if __name__ == "__main__":
-    user_prompt = "What are the main benefits of enrolling in a DataCamp career track?"
+    #user_prompt = "What are the main benefits of enrolling in a DataCamp career track?"
+    user_prompt = input("Enter your query: ")
     database_query_vector = get_vector()
 
     context_list = qdrant_client.search(
