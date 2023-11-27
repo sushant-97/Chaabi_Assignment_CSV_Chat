@@ -1,4 +1,5 @@
 # api_functions.py
+import sys
 import pandas as pd
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -10,8 +11,12 @@ import torch
 from qdrant_client import QdrantClient, models
 from qdrant_client.http.models import Distance, VectorParams, PointStruct
 
+if len(sys.argv) != 2:
+    print("Usage: python api_functions.py <csv_file_path>")
+    sys.exit(1)
 
-csv_file_path = '/Volumes/Passport/CHAABI/bigBasketProducts.csv'
+# csv_file_path = '/Volumes/Passport/CHAABI/bigBasketProducts.csv'
+csv_file_path = sys.argv[1]
 df = pd.read_csv(csv_file_path)
 df = df[:500]
 
