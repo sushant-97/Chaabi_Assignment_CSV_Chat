@@ -18,7 +18,7 @@ if len(sys.argv) != 2:
 # csv_file_path = '/Volumes/Passport/CHAABI/bigBasketProducts.csv'
 csv_file_path = sys.argv[1]
 df = pd.read_csv(csv_file_path)
-df = df[:500]
+#df = df[:500]
 
 # Create sentences using DataFrame columns
 # index, product, category, sub_category, brand, sale_price, market_price, type, rating, description
