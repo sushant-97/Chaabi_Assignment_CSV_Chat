@@ -1,4 +1,9 @@
 # Chaabi_Assignment_CSV_Chat
+Step 0:
+Install all the requirements using following
+```
+pip install -r requirements.txt
+```
 
 Step 1:
 Install docker and 
