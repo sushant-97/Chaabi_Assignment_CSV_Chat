@@ -1,6 +1,6 @@
 # Chaabi_Assignment_CSV_Chat
 This API receives a user prompt via a POST request to the '/query' endpoint. It uses Sentence Transformers to convert the prompt into an embedding, performs a search in a Qdrant collection which we first create for our database to get context, and then passes the prompt along with context to LLM[Falcon 7B]. The API is designed to provide insights or additional information based on the user's input.
-
+First I have used colab to store embeddings and query llm based on context. Later I used local environment to create API. To generate results on local environment I have used T5 for text generation but Falcon 7B is recommned for good results
 
 Preprocessing for storing row in qDrant
 BigBasket’s Products List data has many column and LLMs or NLP models have good understanding of natural language text. Hence I first converted a single row of table into text as follows
