@@ -25,7 +25,7 @@ python store_embeddings.py [/path/to/your/csv/file.csv]
 Your quadrant database will be ready to use by LLM.
 
 Step 2:
-Run main.py file to host api.
+Run main.py file to host api. Inside this we query LLM. I have tested using T5 due to resources but have also written code for Falcon which gives better results.
 ```
 python main.py
 ```
