@@ -20,4 +20,17 @@ python store_embeddings.py [/path/to/your/csv/file.csv]
 Your quadrant database will be ready to use by LLM.
 
 Step 2:
+Run main.py file to host api.
+```
+python main.py
+```
+
+Step 3:
+Test API using test.py file which take two arguments
+api_url and user_prompt.
+Run test.py to use API endpoint as follows
+```
+python test.py --api_url "http://192.168.251.119:8888/query" --user_prompt "what is the rate of nissin noodles?"
+
+```
 
