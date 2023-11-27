@@ -47,7 +47,7 @@ def query_endpoint():
             )
             
             # Perform additional processing using llm_res if needed
-            llm_res = query_llm(user_prompt, context_list["description"])
+            llm_res = query_llm(user_prompt, context_list)
             print("***********HEEHEHRR")
             # llm_res = "Print LLM Res"
 
