@@ -11,5 +11,13 @@ docker run -p 6333:6333 -v $(pwd)/qdrant_storage:/qdrant/storage:z qdrant/qdrant
 
 ```
 
+First store embeddings. To store embeddings in qDrant runn store_embeddings.py file as follows.
+
+```
+python store_embeddings.py [/path/to/your/csv/file.csv]
+
+```
+Your quadrant database will be ready to use by LLM.
 
 Step 2:
+
