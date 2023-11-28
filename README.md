@@ -1,4 +1,15 @@
 # Chaabi_Assignment_CSV_Chat
+### The initial processing of the BigBasket dataset involved consolidating rows in each column to construct documents.
+### To transform the documents into embeddings for streamlined storage and retrieval, the Sentence Transformer embedding model was employed.
+### For effective storage and querying of the generated embeddings, Qdrant DB was integrated into the system.
+
+### Language model queries were conducted using the Falcon-7B-Instruct model, enhancing the system's capability for diverse question answering.
+
+### To address BigBasket-specific inquiries with precision, Langchain was implemented, focusing on accurate data retrieval.
+
+### The technologies utilized in the process include Sentence Transformer for document embedding, Qdrant DB for efficient storage and retrieval, Falcon-7B-Instruct Model for language model queries, and Langchain for specific queries related to the BigBasket dataset.
+
+
 This API receives a user prompt via a POST request to the '/query' endpoint. It uses Sentence Transformers to convert the prompt into an embedding, performs a search in a Qdrant collection which we first create for our database to get context, and then passes the prompt along with context to LLM[Falcon 7B]. The API is designed to provide insights or additional information based on the user's input.
 First I have used colab to store embeddings and query llm based on context. Later I used local environment to create API. To generate results on local environment I have used T5 for text generation but Falcon 7B is recommned for good results
 
