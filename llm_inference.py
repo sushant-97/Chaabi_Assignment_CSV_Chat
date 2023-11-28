@@ -50,6 +50,8 @@ def load_falcon():
         device_map="auto",
     )
     model.to(dev)
+    # Set to eval mode
+    model.eval()
     pipeline = transformers.pipeline(
         "text-generation",
         model=model,
