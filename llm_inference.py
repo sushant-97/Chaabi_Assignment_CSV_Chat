@@ -53,7 +53,14 @@ def load_falcon():
     pipeline = transformers.pipeline(
         "text-generation",
         model=model,
+        max_new_tokens=100,
+        temperature=0.15,
         tokenizer=tokenizer,
+        repetition_penalty=1.75,
+        torch_dtype=torch.bfloat16,
+        trust_remote_code=True,
+        device_map="auto",
+        eos_token_id=tokenizer.eos_token_id,
     )
 
     return pipeline, tokenizer
