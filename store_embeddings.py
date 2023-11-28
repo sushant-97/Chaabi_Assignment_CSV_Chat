@@ -1,4 +1,3 @@
-# api_functions.py
 import sys
 import pandas as pd
 import numpy as np
@@ -12,7 +11,7 @@ from qdrant_client import QdrantClient, models
 from qdrant_client.http.models import Distance, VectorParams, PointStruct
 
 if len(sys.argv) != 2:
-    print("Usage: python api_functions.py <csv_file_path>")
+    print("Usage: python store_embeddings.py <csv_file_path>")
     sys.exit(1)
 
 # csv_file_path = '/Volumes/Passport/CHAABI/bigBasketProducts.csv'
@@ -26,7 +25,7 @@ sentences = []
 for _, row in df.iterrows():
     sentence = f"""This is information for {row['product']} in the subcategory "{row['sub_category']}" in the main category of "{row['category']}". """
     sentence += f"""Brand of the product is "{row['brand']}". This has sale_price of "${row['sale_price']}" and market price "${row['market_price']}". """
-    sentence += f"""It's a "{row['type']}" with a "{row['rating']}" star rating. Here is the description: "{row['description']}"."""
+    sentence += """ It's a "{row['type']}" with a "{row['rating']}" star rating. Here is the description: "{row['description']}"."""
     sentences.append(sentence)
 print(len(sentences))
 
